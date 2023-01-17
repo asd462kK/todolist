@@ -1,25 +1,28 @@
 {
 	"info": {
-		"_postman_id": "7464ff5e-cd6c-4d79-93a2-e900cce9ca03",
+		"_postman_id": "3dd756ed-799d-49e1-86d6-3c941f7e3059",
 		"name": "TODO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24700867"
+		"_exporter_id": "12434516"
 	},
 	"item": [
 		{
 			"name": "createprofile",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [
 					{
-						"key": "Token",
-						"value": "{{Token}}",
+						"key": "token",
+						"value": "{{token}}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \r\n\"firstName\":\"Nasima\",\r\n\"lastName\":\"Ahmad\",\r\n\"emailAddress\":\"nasima@gmail.com\",\r\n\"phoneNumber\":\"01710000001\",\r\n\"userName\":\"Nasima\",\r\n\"city\":\"Rangpur\",\r\n\"passWord\":\"12345\"\r\n\r\n}",
+					"raw": "{\r\n \r\n\"firstName\":\"Anwar\",\r\n\"lastName\":\"Zahid\",\r\n\"emailAddress\":\"anwar@gmail.com\",\r\n\"phoneNumber\":\"01710000001\",\r\n\"userName\":\"anwar\",\r\n\"city\":\"Rangpur\",\r\n\"passWord\":\"12345\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -44,14 +47,14 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Token",
-						"value": "{{Token}}",
+						"key": "token",
+						"value": "{{token}}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \"userName\":\"Nasim\",\r\n\"passWord\":\"12345\"\r\n}",
+					"raw": "{\r\n \"userName\":\"anwar\",\r\n\"passWord\":\"12345\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -73,11 +76,14 @@
 		{
 			"name": "SelectProfile",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "GET",
 				"header": [
 					{
-						"key": "Token",
-						"value": "{{Token}}",
+						"key": "token",
+						"value": "{{token}}",
 						"type": "text"
 					}
 				],
@@ -99,14 +105,14 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Token",
-						"value": "{{Token}}",
+						"key": "token",
+						"value": "{{token}}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \r\n\"firstName\":\"Md.Faruk\",\r\n\"lastName\":\"Hossen\",\r\n\"emailAddress\":\"M\",\r\n\"phoneNumber\":\"M\",\r\n\"city\":\"Bhila\",\r\n\"passWord\":\"123\"\r\n}",
+					"raw": "{\r\n \r\n\"firstName\":\"Md.Faruk\",\r\n\"lastName\":\"Hossen\",\r\n\"emailAddress\":\"faruk@gmail.com\",\r\n\"phoneNumber\":\"01521478568\",\r\n\"city\":\"Bhila\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -131,14 +137,14 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Token",
-						"value": "{{Token}}",
+						"key": "token",
+						"value": "{{token}}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"TodSubject\":\"TodSubject\",\r\n        \"TodoDescripition\":\"TodoDescripition\"\r\n}",
+					"raw": "{\r\n     \"TodoSubject\":\"MERN II\",\r\n        \"TodoDescription\":\"MongoDB, Express.JS, ReactJS NextJS\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -159,27 +165,18 @@
 		},
 		{
 			"name": "SelectTodo",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "GET",
 				"header": [
 					{
-						"key": "Token",
-						"value": "{{Token}}",
+						"key": "token",
+						"value": "{{token}}",
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"userName\":\"far\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "{{baseurl}}/SelectTodo",
 					"host": [
@@ -198,14 +195,14 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Token",
-						"value": "{{Token}}",
+						"key": "token",
+						"value": "{{token}}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"TodSubject\":\"newTodSubject\",\r\n        \"TodoDescripition\":\"newTodoDescripition\",\r\n        \"_id\":\"63c5444a6f4049ee40780bba\"\r\n}\r\n",
+					"raw": "{\r\n     \"TodoSubject\":\"newTodSubject\",\r\n        \"TodoDescription\":\"newTodoDescripition\",\r\n        \"_id\":\"63c620b2ef987e1946111ef7\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -252,8 +249,8 @@
 			"type": "string"
 		},
 		{
-			"key": "Token",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY0OTA5NzksImRhdGEiOnsiX2lkIjoiNjNjNWFiNzExMzlkNGY2NDE5OGY4NTUwIiwiZmlyc3ROYW1lIjoiTWQgTmFzaW0iLCJsYXN0TmFtZSI6IkFobWFkIiwiZW1haWxBZGRyZXNzIjoibmFzaW1AZ21haWwuY29tIiwicGhvbmVOdW1iZXIiOiIwMTcxMDAwMDAwMSIsInVzZXJOYW1lIjoiTmFzaW0iLCJjaXR5IjoiUmFuZ3B1ciIsInBhc3NXb3JkIjoiMTIzNDUifSwiaWF0IjoxNjczODk4OTc5fQ.t7BFoW8N4TGugnCdBXQY6ijefaefHkBticGHeMKKAxw",
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY1MjA1MzksImRhdGEiOnsiX2lkIjoiNjNjNjFkNTRlMTQ0N2Y1ZmI3ZjNlMzRhIiwiZmlyc3ROYW1lIjoiTWQuRmFydWsiLCJsYXN0TmFtZSI6Ikhvc3NlbiIsImVtYWlsQWRkcmVzcyI6ImZhcnVrQGdtYWlsLmNvbSIsInBob25lTnVtYmVyIjoiMDE1MjE0Nzg1NjgiLCJ1c2VyTmFtZSI6ImFud2FyIiwiY2l0eSI6IkJoaWxhIiwicGFzc1dvcmQiOiIxMjM0NSJ9LCJpYXQiOjE2NzM5Mjg1Mzl9.5-eSpK-ocVX6ZLZXKPMg9JDmYYJITsH-CvXYVQkywJ8",
 			"type": "string"
 		}
 	]
